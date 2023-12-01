@@ -1,0 +1,79 @@
+@font-face {
+  src: url("/assets/fonts/manrope/Manrope-Regular.ttf") format("truetype");
+  font-family: "Manrope-Regular";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/manrope/Manrope-Bold.ttf") format("truetype");
+  font-family: "Manrope-Bold";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-family: "Manrope-SemiBold";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/manrope/Manrope-ExtraBold.ttf") format("truetype");
+  font-family: "Manrope-ExtraBold";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/manrope/Manrope-Medium.ttf") format("truetype");
+  font-family: "Manrope-Medium";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/acrom/Acrom-Medium.ttf") format("truetype");
+  font-family: "Acrom-Medium";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/acrom/Acrom-Regular.ttf") format("truetype");
+  font-family: "Acrom-Regular";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/assets/fonts/acrom/Acrom-Bold.ttf") format("truetype");
+  font-family: "Acrom-Bold";
+  font-display: swap;
+}
+
+.font-manrope-regular {
+  font-family: "Manrope-Regular", sans-serif;
+}
+
+.font-manrope-bold {
+  font-family: "Manrope-Bold", sans-serif;
+}
+
+.font-manrope-semi-bold {
+  font-family: "Manrope-SemiBold", sans-serif;
+}
+
+.font-manrope-extra-bold {
+  font-family: "Manrope-ExtraBold", sans-serif;
+}
+
+.font-manrope-medium {
+  font-family: "Manrope-Medium", sans-serif;
+}
+
+.font-acrom-medium {
+  font-family: "Acrom-Medium", sans-serif;
+}
+
+.font-acrom-regular {
+  font-family: "Acrom-Regular", sans-serif;
+}
+
+.font-acrom-bold {
+  font-family: "Acrom-Bold", sans-serif;
+}
