@@ -1,0 +1,161 @@
+.login-page{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: 3s ease;
+  overflow: hidden;
+
+  .gradient-box {
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+                    180deg,
+                    rgba(69, 65, 66, 0.8) 0%,
+                    rgba(69, 65, 66, 0.764523) 30.38%,
+                    rgba(69, 65, 66, 0.448582) 75.73%,
+                    rgba(69, 65, 66, 0) 100%
+    );
+    z-index: 2;
+  }
+  .usr-img {
+    position: absolute;
+    height: 505px;
+    transition: 3s ease;
+    z-index: 3;
+    animation-name: animation_user;
+    animation-duration: 4s;
+    transform: scale(1.4);
+    bottom: 50px;
+    width: 646px;
+    left: 0px;
+  }
+  .bgc {
+    height: 100%;
+    position: absolute;
+    left: -2px;
+    transform: scale(1) translateX(-800px);
+    transition: 3s ease;
+    z-index: 1;
+    animation-name: animation;
+    animation-duration: 4s;
+  }
+  @keyframes animation {
+    0% {
+      height: 100vh;
+      transform: scale(1.1) translateX(124px);
+    }
+    100% {
+      transform: scale(1) translateX(-800px);
+      height: 100%;
+    }
+  }
+  @keyframes animation_user {
+    0% {
+      left: -20px;
+      bottom: -20px;
+      width: 454px;
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.4);
+      bottom: 50px;
+      width: 646px;
+      left: 0px;
+    }
+  }
+  .form {
+    width: 492px;
+    max-width: 100%;
+    position: relative;
+    z-index: 30;
+
+    .form-image-wrap{
+      text-align: center;
+      padding: 0 40px;
+      margin-top: 20px;
+      img{
+        width: 100%;
+      }
+    }
+
+    .login-box{
+      background: #FFFFFF;
+      box-shadow: 2px 0px 40px 0px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      margin-top: 36px;
+      margin-bottom: 96px;
+
+      h3{
+        color: #454142;
+        text-align: center;
+        font-family: "Acrom-Bold", sans-serif;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: 0.1px;
+        margin-bottom: 40px;
+      }
+      h4{
+        color: #454142;
+        text-align: center;
+        font-family: "Acrom-Bold", sans-serif;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        margin-bottom: 40px;
+      }
+      .ant-form{
+        .ant-form-item{
+          margin-bottom: 20px;
+          label{
+            color: #8083A3;
+            font-family: "Acrom-Regular", sans-serif;
+            font-size: 14px;
+            line-height: 21px;
+            &:before{
+              content: none;
+            }
+          }
+          input, .ant-input-password {
+            color: #454142;
+            font-family: "Acrom-Medium", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 4px 0 8px;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-radius: 0;
+            border-bottom-color: #B5B5BE;
+            box-shadow: none;
+          }
+          .ant-input-password{
+            input{
+              padding: 0;
+            }
+          }
+        }
+        button{
+          background-color: #D70C17;
+          padding: 8px;
+          height: auto;
+          border-radius: 0;
+          margin-top: 20px;
+          span{
+            color: #FFF;
+            font-family: "Acrom-Medium", sans-serif;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -98,7 +98,7 @@ const MainLayout = (props) => {
                 <div className="main-layout-right-content">
                     <Switch>
                         <Route path="/main/home" exact component={Home}/>
-                        <Route path="/main/bills-payments" exact component={BillsPayments}/>
+                        <Route path="/main/bills-payments" component={BillsPayments}/>
                     </Switch>
                 </div>
             </div>
