@@ -1029,6 +1029,8 @@ button {
                 &.ant-input{
                   height: auto;
                   padding: 10px 12px;
+                  font-size: 16px;
+                  line-height: 26px;
                   &.ant-input-disabled{
                     color: #2B2D33;
                     background: #EFEFEF;
@@ -1038,6 +1040,10 @@ button {
                   }
 
                 }
+              }
+              textarea{
+                font-size: 16px;
+                line-height: 26px;
               }
               .ant-input-number{
                 border-radius: 8px;
@@ -1051,6 +1057,27 @@ button {
                   font-size: 16px;
                   line-height: 26px;
                 }
+              }
+            }
+            .balance-info{
+              border-radius: 12px;
+              background-color: #EEF2F5;
+              padding: 24px;
+              margin-bottom: 24px;
+              .info-group{
+                margin-bottom: 0;
+              }
+            }
+            .btn-save{
+              border-radius: 8px;
+              background-color: #292E37;
+              padding: 15px;
+              height: auto;
+              span{
+                color: #FFF;
+                font-family: "Manrope-Bold", sans-serif;
+                font-size: 16px;
+                line-height: 22px;
               }
             }
           }

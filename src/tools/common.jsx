@@ -6,7 +6,9 @@ export const postData = (url, data) => {
     url,
     data,
   };
-  return httpRequest(config);
+  return httpRequest(config).catch(err => {
+    console.log("err", err)
+  });
 };
 
 export const getData = (url) => {

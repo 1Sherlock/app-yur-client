@@ -2,6 +2,7 @@ import {UPDATE_STATE_AUTH} from "../types";
 import axios, {HttpStatusCode} from "axios";
 import {API_PATH} from "../../tools/constants";
 import {message} from "antd";
+import {postData} from "../../tools/common";
 
 export function updateState(data) {
     return {
@@ -11,16 +12,27 @@ export function updateState(data) {
 }
 
 export const sendVerificationCode = (values) => dispatch => {
-    axios
-        .post(API_PATH + "authenticate", values)
-        .then((res) => {
-            if (res.status === HttpStatusCode.Ok){
-                dispatch(updateState({authState: 2, verificationData: res.data}))
-            }
+    console.log(values)
+    postData(API_PATH + "authenticate", values)
+        .then(res => {
+            console.log(res);
         })
-        .catch((err) => {
-            message.error("Имя пользователя или пароль неверны!");
-        });
+    // axios
+    //     .post(API_PATH + "authenticate", values)
+    //     .then((res) => {
+    //         if (res.status === HttpStatusCode.Ok){
+    //             dispatch(updateState({authState: 2, verificationData: res.data}))
+    //         }
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //         if(err){
+    //             if (err.response){
+    //
+    //             }
+    //         }
+    //         message.error("Имя пользователя или пароль неверны!");
+    //     });
 }
 
 export const confirmVerificationCode = (values, verificationData) => dispatch => {

@@ -1,7 +1,8 @@
 import React from 'react';
-import {Input, InputNumber, Select} from "antd";
+import {Button, Input, InputNumber, Select} from "antd";
 
 const {Option} = Select;
+const { TextArea } = Input;
 const PaymentOrder = () => {
 
     return (
@@ -62,6 +63,122 @@ const PaymentOrder = () => {
                             <label htmlFor="number">Номер</label>
                              <InputNumber placeholder="Номер" id="number"  style={{width: "100%"}}/>
                         </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="info-group">
+                            <label htmlFor="document_date">Дата документа</label>
+                            <InputNumber placeholder="Дата документа" id="document_date"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="recipient_name">Наименование получателя</label>
+                            <Input placeholder="Наименование получателя" id="recipient_name"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="info-group">
+                            <label htmlFor="bank_code">Код банка получателя</label>
+                            <InputNumber placeholder="Код банка получателя" id="bank_code"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-9">
+                        <div className="info-group">
+                            <label htmlFor="bank_name2">Наименование банка</label>
+                            <Input placeholder="Наименование банка" id="bank_name2"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="recipient_account">Счет получателя</label>
+                            <InputNumber placeholder="Счет получателя" id="recipient_account"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="stir">ИНН</label>
+                            <InputNumber placeholder="ИНН" id="stir"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="pinfl">ПИНФЛ</label>
+                            <InputNumber placeholder="ПИНФЛ" id="pinfl"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="recipient_name2">Наименование получателя</label>
+                            <Input placeholder="Наименование получателя" id="recipient_name2"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="info-group">
+                            <label htmlFor="tranche_code">Код траншевого символа</label>
+                            <InputNumber placeholder="Код траншевого символа" id="tranche_code"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-9">
+                        <div className="info-group">
+                            <label htmlFor="tranche_code2">Код траншевого символа</label>
+                            <Input placeholder="Код траншевого символа" id="tranche_code2"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-3">
+                        <div className="info-group">
+                            <label htmlFor="payment_code">Код назначения платежа</label>
+                            <InputNumber placeholder="Код назначения платежа" id="payment_code"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-9">
+                        <div className="info-group">
+                            <label htmlFor="payment_code2">Код назначения платежа</label>
+                            <Input placeholder="Код назначения платежа" id="payment_code2"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="payment_sum">Сумма платежа</label>
+                            <InputNumber placeholder="Сумма платежа" id="payment_sum"  style={{width: "100%"}}/>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="info-group">
+                            <label htmlFor="payment_sum_text">Сумма прописью</label>
+                            <Input
+                                id="payment_sum_text"
+                                disabled
+                                value='0 Сум, 00 тийин'
+                                style={{width: "100%"}}
+                            />
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <div className="info-group">
+                            <label htmlFor="purpose">Назначение платежа</label>
+                            <TextArea rows={4}  id="purpose" placeholder="Назначение платежа"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="balance-info">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="info-group">
+                                <label htmlFor="unposted_balance">Непроведённое сальдо</label>
+                                <InputNumber placeholder="Непроведённое сальдо" id="unposted_balance"  style={{width: "100%"}}/>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="info-group">
+                                <label htmlFor="balance_account">Сальдо на счету</label>
+                                <InputNumber placeholder="Сальдо на счету" id="balance_account"  style={{width: "100%"}}/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6">
+                        <Button type="primary" className="btn-save" block>Сахранить</Button>
                     </div>
                 </div>
             </div>

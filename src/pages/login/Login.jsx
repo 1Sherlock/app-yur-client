@@ -30,8 +30,7 @@ const Login = (props) => {
                         {props.authState === 1 ?
                             <>
                                 <h3>
-                                    Введите свой логин и <br/>
-                                    пароль
+                                    Введите свой логин и <br/> пароль
                                 </h3>
                                 <Form onFinish={onFinish} layout="vertical">
                                     <Form.Item label="Имя пользователя" name="username" rules={[{required: true, message: 'Пожалуйста, введите свое имя пользователя!'}]}>
@@ -46,7 +45,7 @@ const Login = (props) => {
                                 </Form>
                             </> :
                             <>
-                                <h4>Введите 6 значный код, отправленный <br/> на номер *** ** *** {props.verificationData ? (props.verificationData.phoneNumber?.substring(-4, -2) + " " + props.verificationData.phoneNumber?.substring(-2)): ""}</h4>
+                                <h4>Введите {/*6 значный*/} код, отправленный <br/> на номер *** ** *** {props.verificationData ? (props.verificationData.phoneNumber?.substring(-4, -2) + " " + props.verificationData.phoneNumber?.substring(-2)): ""}</h4>
                                 <Form onFinish={onFinishVerification} layout="vertical">
                                     <Form.Item name="code" rules={[{required: true, message: 'Пожалуйста, введите код!'}]}>
                                         <Input placeholder="- - - - - -" style={{textAlign: "center"}}/>
